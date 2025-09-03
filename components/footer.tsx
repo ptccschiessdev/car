@@ -3,34 +3,30 @@ import Link from 'next/link'
 
 const links = [
     {
-        title: 'Features',
+        title: 'Unsere Website',
         href: '#',
     },
     {
-        title: 'Solution',
+        title: 'Weitere Inserate',
         href: '#',
     },
     {
-        title: 'Customers',
+        title: 'Unser Service',
         href: '#',
     },
     {
-        title: 'Pricing',
+        title: 'Team',
         href: '#',
     },
     {
-        title: 'Help',
-        href: '#',
-    },
-    {
-        title: 'About',
+        title: 'FAQ',
         href: '#',
     },
 ]
 
 export default function FooterSection() {
     return (
-        <footer className="py-16 md:py-32">
+        <footer className="py-16 md:py-15">
             <div className="mx-auto max-w-5xl px-6">
                 <Link
                     href="/"
@@ -158,7 +154,7 @@ export default function FooterSection() {
                         </svg>
                     </Link>
                 </div>
-                <span className="text-muted-foreground block text-center text-sm"> © {new Date().getFullYear()} Tailark, All rights reserved</span>
+                <span className="text-muted-foreground block text-center text-sm"> © {new Date().getFullYear()} Filmfahrt, Alle Rechte vorbehalten</span>
             </div>
         </footer>
     )
