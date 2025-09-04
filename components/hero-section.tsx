@@ -12,12 +12,22 @@ export default function HeroSection() {
           {/* <HeroHeader /> */}
           {/*  <main className="overflow-x-hidden"> */}
                 <section>
-                    <div className="py-24 md:pb-32 lg:pb-36 lg:pt-72">
+                    <div className="relative py-24 md:pb-32 lg:pb-36 lg:pt-72 aspect-video min-h-[50px]">
                         {/* Hero Title and value statement */}
                         <div className="relative mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12"> 
                             <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left">
-                                <h1 className="mt-8 max-w-2xl text-balance text-5xl md:text-6xl lg:mt-16 xl:text-7xl">When Power is unleashed</h1>
-                                <p className="mt-8 max-w-2xl text-balance text-lg">The Cupra Formentor VZ5 ABT leaves no space for desire.</p>
+                                <h1
+                                    className="mt-4 max-w-2xl text-balance text-[clamp(2rem,6vw,3.5rem)] sm:text-4xl md:text-5xl lg:mt-16 xl:text-7xl"
+                                    style={{ lineHeight: 1.1 }}
+                                >
+                                    When Power is unleashed
+                                </h1>
+                                <p
+                                    className="mt-4 max-w-2xl text-balance text-[clamp(1rem,3vw,1.25rem)] sm:text-base md:text-lg"
+                                    style={{ lineHeight: 1.3 }}
+                                >
+                                    The Cupra Formentor VZ5 ABT leaves no space for desire.
+                                </p>
 
                                 <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
                                     {/*<Button
@@ -42,7 +52,7 @@ export default function HeroSection() {
                                 </div>
                             </div>
                         </div>
-                            <div className="absolute inset-1 -z-10 w-full aspect-video rounded-3xl overflow-hidden bg-background">
+                            <div className="absolute inset-0 -z-10 w-full aspect-video rounded-3xl overflow-hidden bg-background">
                                                     <iframe
                                                         src="https://player.vod2.infomaniak.com/embed/1jijk03u51dh8"
                                                         className="w-full h-full"
