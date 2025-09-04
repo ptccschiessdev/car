@@ -1,6 +1,7 @@
 import CallToAction from "@/components/call-to-action";
 import ContentSection from "@/components/content-7";
 import FeaturesSection from "@/components/features-8";
+import AppleCardsCarouselSection from "@/components/apple-cards-carousel-section";
 import HeroSection from "@/components/hero-section";
 import Testimonials from "@/components/testimonials";
 import ContentSectionBottom from "@/components/content-1";  
@@ -10,6 +11,7 @@ export default function Home() {
   return <div>
     <HeroSection />
     <FeaturesSection />
+    <AppleCardsCarouselSection />
     <ContentSection />
     <CallToAction />
     <Testimonials />
