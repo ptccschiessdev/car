@@ -33,24 +33,22 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile ? 120 : 300;
+      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile ? 120 : 300;
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   const handleCardClose = (index) => {
-    if (carouselRef.current) {
-      const cardWidth = window.innerWidth < 768 ? 230 : 384;
-      const gap = window.innerWidth < 768 ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1);
-      carouselRef.current.scrollTo({ left: scrollPosition, behavior: "smooth" });
-      setCurrentIndex(index);
-    }
+    // Do nothing: disables auto-scroll on card close
   };
 
   return (
@@ -112,7 +110,7 @@ export const Card = ({ card, index, layout = false }) => {
       <AnimatePresence>
         {open && (
           <div className="fixed inset-0 z-50 h-screen overflow-auto">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 h-full w-full bg-black/80" />
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} ref={containerRef} layoutId={layout ? `card-${card.title}` : undefined} className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900">
               <button className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white" onClick={handleClose}>
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
@@ -138,22 +136,32 @@ export const Card = ({ card, index, layout = false }) => {
             {card.title}
           </motion.p>
         </div>
-        <BlurImage src={card.src} alt={card.title} className="absolute inset-0 z-10 object-cover w-full h-full" />
+        {card.video ? (
+          <div className="absolute inset-0 z-10 w-full h-full overflow-hidden">
+            <iframe
+              id="ik-vod-1jijk03u53eaq"
+              className="ik-player-1jhvl2upwockr ik-embed"
+              src="https://player.vod2.infomaniak.com/embed/1jijk03u53gzq"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0, border: 0 }}
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="royal ride"
+            ></iframe>
+          </div>
+        ) : (
+          <img src={card.src} alt={card.title} className="absolute inset-0 z-10 object-cover w-full h-full" />
+        )}
       </motion.button>
     </>
   );
 };
 
 export const BlurImage = ({ src, className, alt, ...rest }) => {
-  const [isLoading, setLoading] = useState(true);
   return (
     <img
       className={cn(
         "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
         className,
       )}
-      onLoad={() => setLoading(false)}
       src={src}
       loading="lazy"
       decoding="async"

@@ -2,13 +2,13 @@ import { cn } from '@/lib/utils'
 
 export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
     return (
-       <img className="h-5 w-fit dark:invert" src="/testlogo.png" alt="Nvidia Logo" height="20" width="auto" /> 
+    <img className="h-5 w-fit" src="/testlogo.png" alt="Nvidia Logo" height="20" width="auto" /> 
     )
 }
 
 export const LogoIcon = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
     return (
-       <img className="h-5 w-fit dark:invert" src="/testlogo.png" alt="Nvidia Logo" height="20" width="auto" /> 
+    <img className="h-5 w-fit" src="/testlogo.png" alt="Nvidia Logo" height="20" width="auto" /> 
     )
 }
 

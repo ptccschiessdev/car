@@ -26,74 +26,26 @@ export default function Testimonials() {
                         </CardContent>
                     </Card>
                     <Card className="md:col-span-2">
-                        <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
+                        <CardContent className="h-full pt-5">
+                            <blockquote className="grid h-25 grid-rows-[1fr_auto] gap-0">
                                 <p className="text-xl font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
-
-                                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                                    <Avatar className="size-12">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/jonathan.webp"
-                                            alt="Jonathan Yombo"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>JY</AvatarFallback>
-                                    </Avatar>
-                                    <div>
                                         <cite className="text-sm font-medium">Jonathan Yombo</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
-                                    </div>
-                                </div>
                             </blockquote>
                         </CardContent>
                     </Card>
                     <Card>
                         <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
-
-                                <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
-                                    <Avatar className="size-12">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/yucel.webp"
-                                            alt="Yucel Faruksahan"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>YF</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <cite className="text-sm font-medium">Yucel Faruksahan</cite>
-                                        <span className="text-muted-foreground block text-sm">Creator, Tailkits</span>
-                                    </div>
-                                </div>
+                            <blockquote className="grid h-35 grid-rows-[1fr_auto] gap-0">
+                                <p className="text-l font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
+                                        <cite className="text-sm font-medium">Jonathan Yombo</cite>
                             </blockquote>
                         </CardContent>
                     </Card>
                     <Card className="card variant-mixed">
                         <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
-
-                                <div className="grid grid-cols-[auto_1fr] gap-3">
-                                    <Avatar className="size-12">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/rodrigo.webp"
-                                            alt="Rodrigo Aguilar"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>YF</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <p className="text-sm font-medium">Rodrigo Aguilar</p>
-                                        <span className="text-muted-foreground block text-sm">Creator, TailwindAwesome</span>
-                                    </div>
-                                </div>
+                            <blockquote className="grid h-35 grid-rows-[1fr_auto] gap-0">
+                                <p className="text-l font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
+                                        <cite className="text-sm font-medium">Jonathan Yombo</cite>
                             </blockquote>
                         </CardContent>
                     </Card>
